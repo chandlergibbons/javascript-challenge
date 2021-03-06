@@ -2,6 +2,7 @@
 var tableData = data;
 
 
+
 // D3 selects
 var table = d3.select('table');
 var tbody = table.select('tbody');
@@ -59,6 +60,9 @@ shapedrop.forEach(function (values) {
 
 // filtration
 button.on('click', function () {
+
+// prevents page reloads    
+    d3.event.preventDefault()
 
     // clears old data before droping in new filtered search
     tbody.html('');

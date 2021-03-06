@@ -12,6 +12,9 @@ var inputFeild = d3.select("#datetime");
 // handles data filter logic and returns table filtered
 button.on('click', function() {
   
+// prevents page reloads
+  d3.event.preventDefault()
+ 
  // clears table before new reult populates  
   tbody.html('');
     
